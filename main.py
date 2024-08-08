@@ -20,8 +20,7 @@ async def ping(ctx: interactions.SlashContext):
     await ctx.send("Pong!")
 
 
-
-@interactions.slash_command(name='stepsize', description='blub', options=[
+@interactions.slash_command(name='stepsize', description='blub', scopes=guild_ids, options=[
     interactions.SlashCommandOption(name='vertical', type=interactions.OptionType.INTEGER, description='Vertical length of move',
                         required=True), interactions.SlashCommandOption(name='horizontal', type=interactions.OptionType.INTEGER, description='Horizontal length of move',
                         required=True), interactions.SlashCommandOption(name='counts', type=interactions.OptionType.INTEGER, description='counts of move',
