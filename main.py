@@ -19,10 +19,12 @@ guild_ids = [647540844873646080]
 async def ping(ctx: interactions.SlashContext):
     await ctx.send("Pong!")
 
+
+
 @interactions.slash_command(name='lowestbin', description='Lowest bin command', options=[
-    interactions.Option(name='vertical', type=interactions.OptionType.INTEGER, description='Vertical length of move',
-                        required=True), interactions.Option(name='horizontal', type=interactions.OptionType.INTEGER, description='Horizontal length of move',
-                        required=True), interactions.Option(name='counts', type=interactions.OptionType.INTEGER, description='counts of move',
+    interactions.SlashCommandOption(name='vertical', type=interactions.OptionType.INTEGER, description='Vertical length of move',
+                        required=True), interactions.SlashCommandOption(name='horizontal', type=interactions.OptionType.INTEGER, description='Horizontal length of move',
+                        required=True), interactions.SlashCommandOption(name='counts', type=interactions.OptionType.INTEGER, description='counts of move',
                         required=True)])
 async def lowestbin(ctx: interactions.SlashContext, vertical, horizontal, counts):
 
