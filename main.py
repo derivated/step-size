@@ -21,7 +21,7 @@ async def ping(ctx: interactions.SlashContext):
 
 
 
-@interactions.slash_command(name='lowestbin', description='Lowest bin command', options=[
+@interactions.slash_command(name='stepsize', description='blub', options=[
     interactions.SlashCommandOption(name='vertical', type=interactions.OptionType.INTEGER, description='Vertical length of move',
                         required=True), interactions.SlashCommandOption(name='horizontal', type=interactions.OptionType.INTEGER, description='Horizontal length of move',
                         required=True), interactions.SlashCommandOption(name='counts', type=interactions.OptionType.INTEGER, description='counts of move',
