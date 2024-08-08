@@ -10,7 +10,7 @@ load_dotenv()
 
 TOKEN = os.environ['ALTTOKEN']
 
-bot = interactions.Client(TOKEN,
+bot = interactions.Client(token=TOKEN,
                           intents=interactions.Intents.DEFAULT)
 
 guild_ids = [647540844873646080]
