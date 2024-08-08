@@ -38,3 +38,5 @@ async def lowestbin(ctx: interactions.SlashContext, vertical, horizontal, counts
 
 
     await ctx.send(str(num))
+
+bot.start()
