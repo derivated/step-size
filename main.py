@@ -15,11 +15,11 @@ bot = interactions.Client(token=TOKEN,
 
 guild_ids = [647540844873646080]
 
-@bot.command(name="ping", description="Ping command", scope=guild_ids)
+@interactions.slashcommand(name="ping", description="Ping command", scope=guild_ids)
 async def ping(ctx: interactions.CommandContext):
     await ctx.send("Pong!")
 
-@bot.command(name='lowestbin', description='Lowest bin command', scope=guild_ids, options=[
+@interactions.slashcommand(name='lowestbin', description='Lowest bin command', scope=guild_ids, options=[
     interactions.Option(name='vertical', type=interactions.OptionType.INTEGER, description='Vertical length of move',
                         required=True), interactions.Option(name='horizontal', type=interactions.OptionType.INTEGER, description='Horizontal length of move',
                         required=True), interactions.Option(name='counts', type=interactions.OptionType.INTEGER, description='counts of move',
