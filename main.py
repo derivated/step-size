@@ -41,6 +41,8 @@ async def stridesize(ctx: interactions.SlashContext, vertical, horizontal, count
     num = 1 / num
     num *= 8
 
+    print("Inputs: Vertical: " + str(vertical) + ", Horizontal: " + str(horizontal) + ", Counts: " + str(counts) + ", Result: " + str(num))
+
     await ctx.send('This move is ' + str(num) + ' to 5')
 
 
